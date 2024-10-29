@@ -7,6 +7,7 @@ export default function Home() {
         <div>
             <main>
                 <h3>Purple</h3>
+                <h1>Hi</h1>
             </main>
 
             <a href="https://github.com/Z-Soriano">
