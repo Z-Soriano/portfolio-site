@@ -7,8 +7,14 @@
   --foreground: #171717;
   --pink: #ff7f7f;
   --purple: #7f7fff;
+  --textLR: 5%;
+  --textUD: 5%;
+  --box-width: 100%; /* Default width */
+  --box-height: auto; /* Default height */
+  --box-bg-color: blue; /* Default background color */
+  --box-text-color: white; /* Default text color */
+  --box-padding: 20px; /* Default padding */
 }
-
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -22,15 +28,7 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
-h3{
-  background: linear-gradient(var(--pink), 30%, var(--purple), var(--purple));
-  color: transparent;
-  background-clip: text;
-  font-size: 108px;
-  font-family: sans-serif;
-  margin: 0 auto;
-  text-align: center;
-}
+
 .title {
   color: blue;
   font-size: 2em;
@@ -43,14 +41,24 @@ h3{
 }
 /* styles/globals.css */
 h1 {
-  color: blue;
+  color: black;
   font-size: 2em;
   text-align: center;
+  -webkit-text-stroke: 0.5px white;
 }
 
 h2 {
   color: green;
   font-weight: bold;
+}
+h3{
+  background: linear-gradient(var(--pink), 30%, var(--purple), var(--purple));
+  color: transparent;
+  background-clip: text;
+  font-size: 108px;
+  font-family: sans-serif;
+  margin: 0 auto;
+  text-align: center;
 }
 
 
@@ -63,9 +71,100 @@ h2 {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Add shadow */
   transition: transform 0.3s ease; /* Smooth transition for hover */
   margin: 0 auto; /*center*/
+  margin-bottom: 15px;
+  display: block;
+  z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
+}
+.image-link {
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
 }
 
 .image:hover {
   transform: scale(1.05); /* Scale up on hover */
 }
+.projImage {
+  width: 300px;
+  height: 350px;
+  transition: transform 0.3s ease;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  opacity: 0.3;
+  border-radius: 10px;
+  z-index: 2;
+}
+.image-wrapper:hover .projImage{
+  transform:scale(1.1);
+  border-color: white;
+  border-width: 2px;
+  z-index: 3;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
 
+
+}
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.overlay-text {
+  position: absolute; /* Position text relative to the container */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for element's own size */
+  color: white; /* Text color */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px; /* Space around text */
+  border-radius: 5px; /* Rounded corners */
+  text-align: center; /* Center the text */
+}
+.image-wrapper{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}.overlay-group {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   color: white;
+ }
+
+.overlay-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.overlay-subtitle {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.overlay-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.overlay-button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
