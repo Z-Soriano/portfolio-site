@@ -4,7 +4,9 @@ import Image from 'next/image';
 
 export default function Home() {
     return (
+
         <div>
+            <title>Zach's Portfolio</title>
             <main>
                 <h3>Free Fabian</h3>
 
@@ -34,7 +36,7 @@ export default function Home() {
                         <div className="overlay-group">
                             <h1 className="overlay-title">About Me</h1>
                             <p className="overlay-subtitle">Second Year CS Major Stat Minor @SDSU</p>
-                            <p className="overlay-subtitle">GPA: 3.97</p>
+                            <p className="overlay-subtitle">GPA: 3.89</p>
                             <p className="overlay-subtitle">Notable Courses:</p>
                             <p className="overlay-subtitle">Calculus II, Linear Algebra, Discrete Math, Data
                                 Structures</p>
@@ -48,8 +50,8 @@ export default function Home() {
                         <img src="/purple.png" className="projImage"/>
                         <div className="overlay-group">
                             <h1 className="overlay-title">Skills</h1>
-                            <p className="overlay-subtitle">- I'm proficient in Java and Python</p>
-                            <p className="overlay-subtitle">- I've been learning JS CSS HTML and Godot</p>
+                            <p className="overlay-subtitle">- Proficient in Java and Python</p>
+                            <p className="overlay-subtitle">- Learning JS CSS HTML and Godot</p>
                         </div>
                     </div>
                 </div>
